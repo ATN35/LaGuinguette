@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="/public/loup-sur-colline.png" />
+    <link rel="icon" type="image/png" href="./public/loup-sur-colline.png" />
   </head>
 
   <body>
@@ -33,7 +33,7 @@
     <header class="nav">
       <div class="logo">
         <img
-          src="public/wolf-badge.png"
+          src="./public/wolf-badge.png"
           alt="logo de la Guinguette des Loups"
         />
       </div>
@@ -285,8 +285,7 @@
       <div class="container grid">
         <div>
           <div class="brand">
-            <img
-              src="/public/evenement-a-meillac.png"
+            <img src="./public/evenement-a-meillac.png" 
               alt="Logo de la Guinguette des Loups"
             />
             <span>LA GUINGUETTE<br />DES LOUPS</span>
@@ -371,23 +370,5 @@
     </section>
     </footer>
     <script src="app.js"></script>
-    <script>
-      // Affichage conditionnel Mentions légales & RGPD
-      document.addEventListener('DOMContentLoaded', function () {
-        const mentionsSection = document.getElementById('mentions-legales');
-        const mentionsLink = document.querySelector('a[href="#mentions-legales"]');
-        const closeBtn = document.querySelector('.close-mentions');
-        if (mentionsLink && mentionsSection && closeBtn) {
-          mentionsLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            mentionsSection.classList.remove('hidden');
-            mentionsSection.scrollIntoView({behavior: 'smooth'});
-          });
-          closeBtn.addEventListener('click', function () {
-            mentionsSection.classList.add('hidden');
-          });
-        }
-      });
-    </script>
   </body>
 </html>

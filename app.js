@@ -22,3 +22,19 @@ window.addEventListener("scroll", () => {
 btn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+// Affichage conditionnel Mentions légales & RGPD
+document.addEventListener("DOMContentLoaded", function () {
+  const mentionsSection = document.getElementById("mentions-legales");
+  const mentionsLink = document.querySelector('a[href="#mentions-legales"]');
+  const closeBtn = document.querySelector(".close-mentions");
+  if (mentionsLink && mentionsSection && closeBtn) {
+    mentionsLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      mentionsSection.classList.remove("hidden");
+      mentionsSection.scrollIntoView({ behavior: "smooth" });
+    });
+    closeBtn.addEventListener("click", function () {
+      mentionsSection.classList.add("hidden");
+    });
+  }
+});
